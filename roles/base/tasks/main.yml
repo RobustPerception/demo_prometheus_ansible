@@ -1,0 +1,15 @@
+---
+- name: Add prometheus sources.list
+  notify: update apt
+  copy:
+    dest: /etc/apt/sources.list.d/prometheus.list
+    content: |
+      deb http://deb.robustperception.io/ precise nightly
+
+- name: Add prometheus apt key
+  notify: update apt
+  apt_key: id=41EFC99D url=https://s3-eu-west-1.amazonaws.com/deb.robustperception.io/41EFC99D.gpg
+
+- name: Disable password ssh logins
+  notify: restart ssh
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^#?PasswordAuthentication .*" line="PasswordAuthentication no"

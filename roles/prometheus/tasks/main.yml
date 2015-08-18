@@ -1,0 +1,46 @@
+---
+- name: Install prometheus
+  apt: name={{item}} state=latest
+  with_items:
+    - prometheus
+    - pushgateway
+    - alertmanager
+    - node-exporter
+
+- name: Create prometheus config
+  notify: restart prometheus
+  template: src=prometheus.yml dest=/etc/prometheus/prometheus.yml
+
+- name: Create prometheus default config
+  notify: restart prometheus
+  copy:
+    dest: /etc/default/prometheus
+    mode: 0755
+    content: |
+      DAEMON_OPTS="-alertmanager.url=http://localhost:9093"
+      # Only 1GB of RAM
+      DAEMON_OPTS="$DAEMON_OPTS -storage.local.memory-chunks=102400"
+      DAEMON_OPTS="$DAEMON_OPTS -storage.local.max-chunks-to-persist=102400"
+      # Keep a year of data
+      DAEMON_OPTS="$DAEMON_OPTS -storage.local.retention=525600"
+      # Security
+      DAEMON_OPTS="$DAEMON_OPTS -web.enable-remote-shutdown=false"
+
+- name: Create menu.lib
+  copy: src=menu.lib dest=/etc/prometheus/console_libraries/menu.lib
+
+- name: Create index.html
+  copy: src=index.html dest=/etc/prometheus/consoles/index.html
+
+
+- meta: flush_handlers
+
+- name: Start prometheus
+  service: name=prometheus state=started enabled=yes
+- name: Start pushgateway
+  service: name=pushgateway state=started enabled=yes
+- name: Start alertmanager
+  service: name=alertmanager state=started enabled=yes
+- name: Start node-exporter
+  service: name=node-exporter state=started enabled=yes
+

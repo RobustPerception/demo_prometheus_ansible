@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tags: [base]
+  roles: 
+    - base
+
+- hosts: all
+  tags: [prometheus]
+  roles:
+    - prometheus
