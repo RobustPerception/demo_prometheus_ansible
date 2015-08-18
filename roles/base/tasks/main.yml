@@ -11,5 +11,5 @@
   apt_key: id=41EFC99D url=https://s3-eu-west-1.amazonaws.com/deb.robustperception.io/41EFC99D.gpg
 
 - name: Disable password ssh logins
-  notify: restart ssh
+  notify: restart sshd
   lineinfile: dest=/etc/ssh/sshd_config regexp="^#?PasswordAuthentication .*" line="PasswordAuthentication no"

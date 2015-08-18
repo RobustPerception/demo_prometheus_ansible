@@ -1,0 +1,20 @@
+---
+
+- name: Install nginx
+  apt: name=nginx
+
+- name: Create nginx configuration
+  notify: restart nginx
+  copy:
+    dest: /etc/nginx/sites-enabled/default
+    mode: 0644
+    content: |
+      server {
+        listen 80;
+        return 301 http://demo.robustperception.io:9090/consoles/index.html;
+      }
+
+- meta: flush_handlers
+
+- name: Start nginx
+  service: name=nginx state=started

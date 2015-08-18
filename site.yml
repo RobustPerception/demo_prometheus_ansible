@@ -5,6 +5,11 @@
     - base
 
 - hosts: all
+  tags: [redirect]
+  roles:
+    - redirect
+
+- hosts: all
   tags: [prometheus]
   roles:
     - prometheus
