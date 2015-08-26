@@ -34,275 +34,260 @@ grid =
       init * 0
   )
 
-init = absent(nonexistent{x="1", y="1"}) 
-       or absent(nonexistent{x="1", y="11"})
-       or absent(nonexistent{x="1", y="111"})
-       or absent(nonexistent{x="1", y="1111"})
-       or absent(nonexistent{x="1", y="11111"})
-       or absent(nonexistent{x="1", y="111111"})
-       or absent(nonexistent{x="1", y="1111111"})
-       or absent(nonexistent{x="1", y="11111111"})
-       or absent(nonexistent{x="1", y="111111111"})
-       or absent(nonexistent{x="1", y="1111111111"})
-       or absent(nonexistent{x="1", y="11111111111"})
-       or absent(nonexistent{x="1", y="111111111111"})
-       or absent(nonexistent{x="1", y="1111111111111"})
-       or absent(nonexistent{x="1", y="11111111111111"})
-       or absent(nonexistent{x="1", y="111111111111111"})
-       or absent(nonexistent{x="1", y="1111111111111111"})
- 
-       or absent(nonexistent{x="11", y="1"}) 
-       or absent(nonexistent{x="11", y="11"})
-       or absent(nonexistent{x="11", y="111"})
-       or absent(nonexistent{x="11", y="1111"})
-       or absent(nonexistent{x="11", y="11111"})
-       or absent(nonexistent{x="11", y="111111"})
-       or absent(nonexistent{x="11", y="1111111"})
-       or absent(nonexistent{x="11", y="11111111"})
-       or absent(nonexistent{x="11", y="111111111"})
-       or absent(nonexistent{x="11", y="1111111111"})
-       or absent(nonexistent{x="11", y="11111111111"})
-       or absent(nonexistent{x="11", y="111111111111"})
-       or absent(nonexistent{x="11", y="1111111111111"})
-       or absent(nonexistent{x="11", y="11111111111111"})
-       or absent(nonexistent{x="11", y="111111111111111"})
-       or absent(nonexistent{x="11", y="1111111111111111"})
-
-       or absent(nonexistent{x="111", y="1"}) 
-       or absent(nonexistent{x="111", y="11"})
-       or absent(nonexistent{x="111", y="111"})
-       or absent(nonexistent{x="111", y="1111"})
-       or absent(nonexistent{x="111", y="11111"})
-       or absent(nonexistent{x="111", y="111111"})
-       or absent(nonexistent{x="111", y="1111111"})
-       or absent(nonexistent{x="111", y="11111111"})
-       or absent(nonexistent{x="111", y="111111111"})
-       or absent(nonexistent{x="111", y="1111111111"})
-       or absent(nonexistent{x="111", y="11111111111"})
-       or absent(nonexistent{x="111", y="111111111111"})
-       or absent(nonexistent{x="111", y="1111111111111"})
-       or absent(nonexistent{x="111", y="11111111111111"})
-       or absent(nonexistent{x="111", y="111111111111111"})
-       or absent(nonexistent{x="111", y="1111111111111111"})
-
-       or absent(nonexistent{x="1111", y="1"}) 
-       or absent(nonexistent{x="1111", y="11"})
-       or absent(nonexistent{x="1111", y="111"})
-       or absent(nonexistent{x="1111", y="1111"})
-       or absent(nonexistent{x="1111", y="11111"})
-       or absent(nonexistent{x="1111", y="111111"})
-       or absent(nonexistent{x="1111", y="1111111"})
-       or absent(nonexistent{x="1111", y="11111111"})
-       or absent(nonexistent{x="1111", y="111111111"})
-       or absent(nonexistent{x="1111", y="1111111111"})
-       or absent(nonexistent{x="1111", y="11111111111"})
-       or absent(nonexistent{x="1111", y="111111111111"})
-       or absent(nonexistent{x="1111", y="1111111111111"})
-       or absent(nonexistent{x="1111", y="11111111111111"})
-       or absent(nonexistent{x="1111", y="111111111111111"})
-       or absent(nonexistent{x="1111", y="1111111111111111"})
-
-       or absent(nonexistent{x="11111", y="1"}) 
-       or absent(nonexistent{x="11111", y="11"})
-       or absent(nonexistent{x="11111", y="111"})
-       or absent(nonexistent{x="11111", y="1111"})
-       or absent(nonexistent{x="11111", y="11111"})
-       or absent(nonexistent{x="11111", y="111111"})
-       or absent(nonexistent{x="11111", y="1111111"})
-       or absent(nonexistent{x="11111", y="11111111"})
-       or absent(nonexistent{x="11111", y="111111111"})
-       or absent(nonexistent{x="11111", y="1111111111"})
-       or absent(nonexistent{x="11111", y="11111111111"})
-       or absent(nonexistent{x="11111", y="111111111111"})
-       or absent(nonexistent{x="11111", y="1111111111111"})
-       or absent(nonexistent{x="11111", y="11111111111111"})
-       or absent(nonexistent{x="11111", y="111111111111111"})
-       or absent(nonexistent{x="11111", y="1111111111111111"})
-
-       or absent(nonexistent{x="111111", y="1"}) 
-       or absent(nonexistent{x="111111", y="11"})
-       or absent(nonexistent{x="111111", y="111"})
-       or absent(nonexistent{x="111111", y="1111"})
-       or absent(nonexistent{x="111111", y="11111"})
-       or absent(nonexistent{x="111111", y="111111"})
-       or absent(nonexistent{x="111111", y="1111111"})
-       or absent(nonexistent{x="111111", y="11111111"})
-       or absent(nonexistent{x="111111", y="111111111"})
-       or absent(nonexistent{x="111111", y="1111111111"})
-       or absent(nonexistent{x="111111", y="11111111111"})
-       or absent(nonexistent{x="111111", y="111111111111"})
-       or absent(nonexistent{x="111111", y="1111111111111"})
-       or absent(nonexistent{x="111111", y="11111111111111"})
-       or absent(nonexistent{x="111111", y="111111111111111"})
-       or absent(nonexistent{x="111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="1111111", y="1"}) 
-       or absent(nonexistent{x="1111111", y="11"})
-       or absent(nonexistent{x="1111111", y="111"})
-       or absent(nonexistent{x="1111111", y="1111"})
-       or absent(nonexistent{x="1111111", y="11111"})
-       or absent(nonexistent{x="1111111", y="111111"})
-       or absent(nonexistent{x="1111111", y="1111111"})
-       or absent(nonexistent{x="1111111", y="11111111"})
-       or absent(nonexistent{x="1111111", y="111111111"})
-       or absent(nonexistent{x="1111111", y="1111111111"})
-       or absent(nonexistent{x="1111111", y="11111111111"})
-       or absent(nonexistent{x="1111111", y="111111111111"})
-       or absent(nonexistent{x="1111111", y="1111111111111"})
-       or absent(nonexistent{x="1111111", y="11111111111111"})
-       or absent(nonexistent{x="1111111", y="111111111111111"})
-       or absent(nonexistent{x="1111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="11111111", y="1"}) 
-       or absent(nonexistent{x="11111111", y="11"})
-       or absent(nonexistent{x="11111111", y="111"})
-       or absent(nonexistent{x="11111111", y="1111"})
-       or absent(nonexistent{x="11111111", y="11111"})
-       or absent(nonexistent{x="11111111", y="111111"})
-       or absent(nonexistent{x="11111111", y="1111111"})
-       or absent(nonexistent{x="11111111", y="11111111"})
-       or absent(nonexistent{x="11111111", y="111111111"})
-       or absent(nonexistent{x="11111111", y="1111111111"})
-       or absent(nonexistent{x="11111111", y="11111111111"})
-       or absent(nonexistent{x="11111111", y="111111111111"})
-       or absent(nonexistent{x="11111111", y="1111111111111"})
-       or absent(nonexistent{x="11111111", y="11111111111111"})
-       or absent(nonexistent{x="11111111", y="111111111111111"})
-       or absent(nonexistent{x="11111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="111111111", y="1"}) 
-       or absent(nonexistent{x="111111111", y="11"})
-       or absent(nonexistent{x="111111111", y="111"})
-       or absent(nonexistent{x="111111111", y="1111"})
-       or absent(nonexistent{x="111111111", y="11111"})
-       or absent(nonexistent{x="111111111", y="111111"})
-       or absent(nonexistent{x="111111111", y="1111111"})
-       or absent(nonexistent{x="111111111", y="11111111"})
-       or absent(nonexistent{x="111111111", y="111111111"})
-       or absent(nonexistent{x="111111111", y="1111111111"})
-       or absent(nonexistent{x="111111111", y="11111111111"})
-       or absent(nonexistent{x="111111111", y="111111111111"})
-       or absent(nonexistent{x="111111111", y="1111111111111"})
-       or absent(nonexistent{x="111111111", y="11111111111111"})
-       or absent(nonexistent{x="111111111", y="111111111111111"})
-       or absent(nonexistent{x="111111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="1111111111", y="1"}) 
-       or absent(nonexistent{x="1111111111", y="11"})
-       or absent(nonexistent{x="1111111111", y="111"})
-       or absent(nonexistent{x="1111111111", y="1111"})
-       or absent(nonexistent{x="1111111111", y="11111"})
-       or absent(nonexistent{x="1111111111", y="111111"})
-       or absent(nonexistent{x="1111111111", y="1111111"})
-       or absent(nonexistent{x="1111111111", y="11111111"})
-       or absent(nonexistent{x="1111111111", y="111111111"})
-       or absent(nonexistent{x="1111111111", y="1111111111"})
-       or absent(nonexistent{x="1111111111", y="11111111111"})
-       or absent(nonexistent{x="1111111111", y="111111111111"})
-       or absent(nonexistent{x="1111111111", y="1111111111111"})
-       or absent(nonexistent{x="1111111111", y="11111111111111"})
-       or absent(nonexistent{x="1111111111", y="111111111111111"})
-       or absent(nonexistent{x="1111111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="11111111111", y="1"}) 
-       or absent(nonexistent{x="11111111111", y="11"})
-       or absent(nonexistent{x="11111111111", y="111"})
-       or absent(nonexistent{x="11111111111", y="1111"})
-       or absent(nonexistent{x="11111111111", y="11111"})
-       or absent(nonexistent{x="11111111111", y="111111"})
-       or absent(nonexistent{x="11111111111", y="1111111"})
-       or absent(nonexistent{x="11111111111", y="11111111"})
-       or absent(nonexistent{x="11111111111", y="111111111"})
-       or absent(nonexistent{x="11111111111", y="1111111111"})
-       or absent(nonexistent{x="11111111111", y="11111111111"})
-       or absent(nonexistent{x="11111111111", y="111111111111"})
-       or absent(nonexistent{x="11111111111", y="1111111111111"})
-       or absent(nonexistent{x="11111111111", y="11111111111111"})
-       or absent(nonexistent{x="11111111111", y="111111111111111"})
-       or absent(nonexistent{x="11111111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="111111111111", y="1"}) 
-       or absent(nonexistent{x="111111111111", y="11"})
-       or absent(nonexistent{x="111111111111", y="111"})
-       or absent(nonexistent{x="111111111111", y="1111"})
-       or absent(nonexistent{x="111111111111", y="11111"})
-       or absent(nonexistent{x="111111111111", y="111111"})
-       or absent(nonexistent{x="111111111111", y="1111111"})
-       or absent(nonexistent{x="111111111111", y="11111111"})
-       or absent(nonexistent{x="111111111111", y="111111111"})
-       or absent(nonexistent{x="111111111111", y="1111111111"})
-       or absent(nonexistent{x="111111111111", y="11111111111"})
-       or absent(nonexistent{x="111111111111", y="111111111111"})
-       or absent(nonexistent{x="111111111111", y="1111111111111"})
-       or absent(nonexistent{x="111111111111", y="11111111111111"})
-       or absent(nonexistent{x="111111111111", y="111111111111111"})
-       or absent(nonexistent{x="111111111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="1111111111111", y="1"}) 
-       or absent(nonexistent{x="1111111111111", y="11"})
-       or absent(nonexistent{x="1111111111111", y="111"})
-       or absent(nonexistent{x="1111111111111", y="1111"})
-       or absent(nonexistent{x="1111111111111", y="11111"})
-       or absent(nonexistent{x="1111111111111", y="111111"})
-       or absent(nonexistent{x="1111111111111", y="1111111"})
-       or absent(nonexistent{x="1111111111111", y="11111111"})
-       or absent(nonexistent{x="1111111111111", y="111111111"})
-       or absent(nonexistent{x="1111111111111", y="1111111111"})
-       or absent(nonexistent{x="1111111111111", y="11111111111"})
-       or absent(nonexistent{x="1111111111111", y="111111111111"})
-       or absent(nonexistent{x="1111111111111", y="1111111111111"})
-       or absent(nonexistent{x="1111111111111", y="11111111111111"})
-       or absent(nonexistent{x="1111111111111", y="111111111111111"})
-       or absent(nonexistent{x="1111111111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="11111111111111", y="1"}) 
-       or absent(nonexistent{x="11111111111111", y="11"})
-       or absent(nonexistent{x="11111111111111", y="111"})
-       or absent(nonexistent{x="11111111111111", y="1111"})
-       or absent(nonexistent{x="11111111111111", y="11111"})
-       or absent(nonexistent{x="11111111111111", y="111111"})
-       or absent(nonexistent{x="11111111111111", y="1111111"})
-       or absent(nonexistent{x="11111111111111", y="11111111"})
-       or absent(nonexistent{x="11111111111111", y="111111111"})
-       or absent(nonexistent{x="11111111111111", y="1111111111"})
-       or absent(nonexistent{x="11111111111111", y="11111111111"})
-       or absent(nonexistent{x="11111111111111", y="111111111111"})
-       or absent(nonexistent{x="11111111111111", y="1111111111111"})
-       or absent(nonexistent{x="11111111111111", y="11111111111111"})
-       or absent(nonexistent{x="11111111111111", y="111111111111111"})
-       or absent(nonexistent{x="11111111111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="111111111111111", y="1"}) 
-       or absent(nonexistent{x="111111111111111", y="11"})
-       or absent(nonexistent{x="111111111111111", y="111"})
-       or absent(nonexistent{x="111111111111111", y="1111"})
-       or absent(nonexistent{x="111111111111111", y="11111"})
-       or absent(nonexistent{x="111111111111111", y="111111"})
-       or absent(nonexistent{x="111111111111111", y="1111111"})
-       or absent(nonexistent{x="111111111111111", y="11111111"})
-       or absent(nonexistent{x="111111111111111", y="111111111"})
-       or absent(nonexistent{x="111111111111111", y="1111111111"})
-       or absent(nonexistent{x="111111111111111", y="11111111111"})
-       or absent(nonexistent{x="111111111111111", y="111111111111"})
-       or absent(nonexistent{x="111111111111111", y="1111111111111"})
-       or absent(nonexistent{x="111111111111111", y="11111111111111"})
-       or absent(nonexistent{x="111111111111111", y="111111111111111"})
-       or absent(nonexistent{x="111111111111111", y="1111111111111111"})
-
-       or absent(nonexistent{x="1111111111111111", y="1"}) 
-       or absent(nonexistent{x="1111111111111111", y="11"})
-       or absent(nonexistent{x="1111111111111111", y="111"})
-       or absent(nonexistent{x="1111111111111111", y="1111"})
-       or absent(nonexistent{x="1111111111111111", y="11111"})
-       or absent(nonexistent{x="1111111111111111", y="111111"})
-       or absent(nonexistent{x="1111111111111111", y="1111111"})
-       or absent(nonexistent{x="1111111111111111", y="11111111"})
-       or absent(nonexistent{x="1111111111111111", y="111111111"})
-       or absent(nonexistent{x="1111111111111111", y="1111111111"})
-       or absent(nonexistent{x="1111111111111111", y="11111111111"})
-       or absent(nonexistent{x="1111111111111111", y="111111111111"})
-       or absent(nonexistent{x="1111111111111111", y="1111111111111"})
-       or absent(nonexistent{x="1111111111111111", y="11111111111111"})
-       or absent(nonexistent{x="1111111111111111", y="111111111111111"})
-       or absent(nonexistent{x="1111111111111111", y="1111111111111111"})
-
+# python -c 'print "\n".join(["init{x=\"%(x)s\",y=\"%(y)s\"} = 1" % {"x" : "1" * (x + 1) , "y" : "1" * (y + 1)} for y in range(16) for x in range(16)])'
+init{x="1",y="1"} = 1
+init{x="11",y="1"} = 1
+init{x="111",y="1"} = 1
+init{x="1111",y="1"} = 1
+init{x="11111",y="1"} = 1
+init{x="111111",y="1"} = 1
+init{x="1111111",y="1"} = 1
+init{x="11111111",y="1"} = 1
+init{x="111111111",y="1"} = 1
+init{x="1111111111",y="1"} = 1
+init{x="11111111111",y="1"} = 1
+init{x="111111111111",y="1"} = 1
+init{x="1111111111111",y="1"} = 1
+init{x="11111111111111",y="1"} = 1
+init{x="111111111111111",y="1"} = 1
+init{x="1111111111111111",y="1"} = 1
+init{x="1",y="11"} = 1
+init{x="11",y="11"} = 1
+init{x="111",y="11"} = 1
+init{x="1111",y="11"} = 1
+init{x="11111",y="11"} = 1
+init{x="111111",y="11"} = 1
+init{x="1111111",y="11"} = 1
+init{x="11111111",y="11"} = 1
+init{x="111111111",y="11"} = 1
+init{x="1111111111",y="11"} = 1
+init{x="11111111111",y="11"} = 1
+init{x="111111111111",y="11"} = 1
+init{x="1111111111111",y="11"} = 1
+init{x="11111111111111",y="11"} = 1
+init{x="111111111111111",y="11"} = 1
+init{x="1111111111111111",y="11"} = 1
+init{x="1",y="111"} = 1
+init{x="11",y="111"} = 1
+init{x="111",y="111"} = 1
+init{x="1111",y="111"} = 1
+init{x="11111",y="111"} = 1
+init{x="111111",y="111"} = 1
+init{x="1111111",y="111"} = 1
+init{x="11111111",y="111"} = 1
+init{x="111111111",y="111"} = 1
+init{x="1111111111",y="111"} = 1
+init{x="11111111111",y="111"} = 1
+init{x="111111111111",y="111"} = 1
+init{x="1111111111111",y="111"} = 1
+init{x="11111111111111",y="111"} = 1
+init{x="111111111111111",y="111"} = 1
+init{x="1111111111111111",y="111"} = 1
+init{x="1",y="1111"} = 1
+init{x="11",y="1111"} = 1
+init{x="111",y="1111"} = 1
+init{x="1111",y="1111"} = 1
+init{x="11111",y="1111"} = 1
+init{x="111111",y="1111"} = 1
+init{x="1111111",y="1111"} = 1
+init{x="11111111",y="1111"} = 1
+init{x="111111111",y="1111"} = 1
+init{x="1111111111",y="1111"} = 1
+init{x="11111111111",y="1111"} = 1
+init{x="111111111111",y="1111"} = 1
+init{x="1111111111111",y="1111"} = 1
+init{x="11111111111111",y="1111"} = 1
+init{x="111111111111111",y="1111"} = 1
+init{x="1111111111111111",y="1111"} = 1
+init{x="1",y="11111"} = 1
+init{x="11",y="11111"} = 1
+init{x="111",y="11111"} = 1
+init{x="1111",y="11111"} = 1
+init{x="11111",y="11111"} = 1
+init{x="111111",y="11111"} = 1
+init{x="1111111",y="11111"} = 1
+init{x="11111111",y="11111"} = 1
+init{x="111111111",y="11111"} = 1
+init{x="1111111111",y="11111"} = 1
+init{x="11111111111",y="11111"} = 1
+init{x="111111111111",y="11111"} = 1
+init{x="1111111111111",y="11111"} = 1
+init{x="11111111111111",y="11111"} = 1
+init{x="111111111111111",y="11111"} = 1
+init{x="1111111111111111",y="11111"} = 1
+init{x="1",y="111111"} = 1
+init{x="11",y="111111"} = 1
+init{x="111",y="111111"} = 1
+init{x="1111",y="111111"} = 1
+init{x="11111",y="111111"} = 1
+init{x="111111",y="111111"} = 1
+init{x="1111111",y="111111"} = 1
+init{x="11111111",y="111111"} = 1
+init{x="111111111",y="111111"} = 1
+init{x="1111111111",y="111111"} = 1
+init{x="11111111111",y="111111"} = 1
+init{x="111111111111",y="111111"} = 1
+init{x="1111111111111",y="111111"} = 1
+init{x="11111111111111",y="111111"} = 1
+init{x="111111111111111",y="111111"} = 1
+init{x="1111111111111111",y="111111"} = 1
+init{x="1",y="1111111"} = 1
+init{x="11",y="1111111"} = 1
+init{x="111",y="1111111"} = 1
+init{x="1111",y="1111111"} = 1
+init{x="11111",y="1111111"} = 1
+init{x="111111",y="1111111"} = 1
+init{x="1111111",y="1111111"} = 1
+init{x="11111111",y="1111111"} = 1
+init{x="111111111",y="1111111"} = 1
+init{x="1111111111",y="1111111"} = 1
+init{x="11111111111",y="1111111"} = 1
+init{x="111111111111",y="1111111"} = 1
+init{x="1111111111111",y="1111111"} = 1
+init{x="11111111111111",y="1111111"} = 1
+init{x="111111111111111",y="1111111"} = 1
+init{x="1111111111111111",y="1111111"} = 1
+init{x="1",y="11111111"} = 1
+init{x="11",y="11111111"} = 1
+init{x="111",y="11111111"} = 1
+init{x="1111",y="11111111"} = 1
+init{x="11111",y="11111111"} = 1
+init{x="111111",y="11111111"} = 1
+init{x="1111111",y="11111111"} = 1
+init{x="11111111",y="11111111"} = 1
+init{x="111111111",y="11111111"} = 1
+init{x="1111111111",y="11111111"} = 1
+init{x="11111111111",y="11111111"} = 1
+init{x="111111111111",y="11111111"} = 1
+init{x="1111111111111",y="11111111"} = 1
+init{x="11111111111111",y="11111111"} = 1
+init{x="111111111111111",y="11111111"} = 1
+init{x="1111111111111111",y="11111111"} = 1
+init{x="1",y="111111111"} = 1
+init{x="11",y="111111111"} = 1
+init{x="111",y="111111111"} = 1
+init{x="1111",y="111111111"} = 1
+init{x="11111",y="111111111"} = 1
+init{x="111111",y="111111111"} = 1
+init{x="1111111",y="111111111"} = 1
+init{x="11111111",y="111111111"} = 1
+init{x="111111111",y="111111111"} = 1
+init{x="1111111111",y="111111111"} = 1
+init{x="11111111111",y="111111111"} = 1
+init{x="111111111111",y="111111111"} = 1
+init{x="1111111111111",y="111111111"} = 1
+init{x="11111111111111",y="111111111"} = 1
+init{x="111111111111111",y="111111111"} = 1
+init{x="1111111111111111",y="111111111"} = 1
+init{x="1",y="1111111111"} = 1
+init{x="11",y="1111111111"} = 1
+init{x="111",y="1111111111"} = 1
+init{x="1111",y="1111111111"} = 1
+init{x="11111",y="1111111111"} = 1
+init{x="111111",y="1111111111"} = 1
+init{x="1111111",y="1111111111"} = 1
+init{x="11111111",y="1111111111"} = 1
+init{x="111111111",y="1111111111"} = 1
+init{x="1111111111",y="1111111111"} = 1
+init{x="11111111111",y="1111111111"} = 1
+init{x="111111111111",y="1111111111"} = 1
+init{x="1111111111111",y="1111111111"} = 1
+init{x="11111111111111",y="1111111111"} = 1
+init{x="111111111111111",y="1111111111"} = 1
+init{x="1111111111111111",y="1111111111"} = 1
+init{x="1",y="11111111111"} = 1
+init{x="11",y="11111111111"} = 1
+init{x="111",y="11111111111"} = 1
+init{x="1111",y="11111111111"} = 1
+init{x="11111",y="11111111111"} = 1
+init{x="111111",y="11111111111"} = 1
+init{x="1111111",y="11111111111"} = 1
+init{x="11111111",y="11111111111"} = 1
+init{x="111111111",y="11111111111"} = 1
+init{x="1111111111",y="11111111111"} = 1
+init{x="11111111111",y="11111111111"} = 1
+init{x="111111111111",y="11111111111"} = 1
+init{x="1111111111111",y="11111111111"} = 1
+init{x="11111111111111",y="11111111111"} = 1
+init{x="111111111111111",y="11111111111"} = 1
+init{x="1111111111111111",y="11111111111"} = 1
+init{x="1",y="111111111111"} = 1
+init{x="11",y="111111111111"} = 1
+init{x="111",y="111111111111"} = 1
+init{x="1111",y="111111111111"} = 1
+init{x="11111",y="111111111111"} = 1
+init{x="111111",y="111111111111"} = 1
+init{x="1111111",y="111111111111"} = 1
+init{x="11111111",y="111111111111"} = 1
+init{x="111111111",y="111111111111"} = 1
+init{x="1111111111",y="111111111111"} = 1
+init{x="11111111111",y="111111111111"} = 1
+init{x="111111111111",y="111111111111"} = 1
+init{x="1111111111111",y="111111111111"} = 1
+init{x="11111111111111",y="111111111111"} = 1
+init{x="111111111111111",y="111111111111"} = 1
+init{x="1111111111111111",y="111111111111"} = 1
+init{x="1",y="1111111111111"} = 1
+init{x="11",y="1111111111111"} = 1
+init{x="111",y="1111111111111"} = 1
+init{x="1111",y="1111111111111"} = 1
+init{x="11111",y="1111111111111"} = 1
+init{x="111111",y="1111111111111"} = 1
+init{x="1111111",y="1111111111111"} = 1
+init{x="11111111",y="1111111111111"} = 1
+init{x="111111111",y="1111111111111"} = 1
+init{x="1111111111",y="1111111111111"} = 1
+init{x="11111111111",y="1111111111111"} = 1
+init{x="111111111111",y="1111111111111"} = 1
+init{x="1111111111111",y="1111111111111"} = 1
+init{x="11111111111111",y="1111111111111"} = 1
+init{x="111111111111111",y="1111111111111"} = 1
+init{x="1111111111111111",y="1111111111111"} = 1
+init{x="1",y="11111111111111"} = 1
+init{x="11",y="11111111111111"} = 1
+init{x="111",y="11111111111111"} = 1
+init{x="1111",y="11111111111111"} = 1
+init{x="11111",y="11111111111111"} = 1
+init{x="111111",y="11111111111111"} = 1
+init{x="1111111",y="11111111111111"} = 1
+init{x="11111111",y="11111111111111"} = 1
+init{x="111111111",y="11111111111111"} = 1
+init{x="1111111111",y="11111111111111"} = 1
+init{x="11111111111",y="11111111111111"} = 1
+init{x="111111111111",y="11111111111111"} = 1
+init{x="1111111111111",y="11111111111111"} = 1
+init{x="11111111111111",y="11111111111111"} = 1
+init{x="111111111111111",y="11111111111111"} = 1
+init{x="1111111111111111",y="11111111111111"} = 1
+init{x="1",y="111111111111111"} = 1
+init{x="11",y="111111111111111"} = 1
+init{x="111",y="111111111111111"} = 1
+init{x="1111",y="111111111111111"} = 1
+init{x="11111",y="111111111111111"} = 1
+init{x="111111",y="111111111111111"} = 1
+init{x="1111111",y="111111111111111"} = 1
+init{x="11111111",y="111111111111111"} = 1
+init{x="111111111",y="111111111111111"} = 1
+init{x="1111111111",y="111111111111111"} = 1
+init{x="11111111111",y="111111111111111"} = 1
+init{x="111111111111",y="111111111111111"} = 1
+init{x="1111111111111",y="111111111111111"} = 1
+init{x="11111111111111",y="111111111111111"} = 1
+init{x="111111111111111",y="111111111111111"} = 1
+init{x="1111111111111111",y="111111111111111"} = 1
+init{x="1",y="1111111111111111"} = 1
+init{x="11",y="1111111111111111"} = 1
+init{x="111",y="1111111111111111"} = 1
+init{x="1111",y="1111111111111111"} = 1
+init{x="11111",y="1111111111111111"} = 1
+init{x="111111",y="1111111111111111"} = 1
+init{x="1111111",y="1111111111111111"} = 1
+init{x="11111111",y="1111111111111111"} = 1
+init{x="111111111",y="1111111111111111"} = 1
+init{x="1111111111",y="1111111111111111"} = 1
+init{x="11111111111",y="1111111111111111"} = 1
+init{x="111111111111",y="1111111111111111"} = 1
+init{x="1111111111111",y="1111111111111111"} = 1
+init{x="11111111111111",y="1111111111111111"} = 1
+init{x="111111111111111",y="1111111111111111"} = 1
+init{x="1111111111111111",y="1111111111111111"} = 1
