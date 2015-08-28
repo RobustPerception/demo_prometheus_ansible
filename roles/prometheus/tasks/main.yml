@@ -17,14 +17,14 @@
     dest: /etc/default/prometheus
     mode: 0755
     content: |
-      DAEMON_OPTS="-alertmanager.url=http://localhost:9093"
+      DAEMON_ARGS="-alertmanager.url=http://localhost:9093"
       # Only 1GB of RAM
-      DAEMON_OPTS="$DAEMON_OPTS -storage.local.memory-chunks=102400"
-      DAEMON_OPTS="$DAEMON_OPTS -storage.local.max-chunks-to-persist=102400"
+      DAEMON_ARGS="$DAEMON_ARGS -storage.local.memory-chunks=102400"
+      DAEMON_ARGS="$DAEMON_ARGS -storage.local.max-chunks-to-persist=102400"
       # Keep a year of data
-      DAEMON_OPTS="$DAEMON_OPTS -storage.local.retention=525600"
+      DAEMON_ARGS="$DAEMON_ARGS -storage.local.retention=525600h"
       # Security
-      DAEMON_OPTS="$DAEMON_OPTS -web.enable-remote-shutdown=false"
+      DAEMON_ARGS="$DAEMON_ARGS -web.enable-remote-shutdown=false"
 
 - name: Create menu.lib
   copy: src=menu.lib dest=/etc/prometheus/console_libraries/menu.lib
