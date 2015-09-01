@@ -23,6 +23,8 @@
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.max-chunks-to-persist=102400"
       # Keep a year of data
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.retention=525600h"
+      # Make links work
+      DAEMON_ARGS="$DAEMON_ARGS -web.external-url=http://demo.robustperception.io:9090/"
       # Security
       DAEMON_ARGS="$DAEMON_ARGS -web.enable-remote-shutdown=false"
 
@@ -39,6 +41,7 @@
   notify: restart prometheus
   copy: src={{item}} dest=/etc/prometheus/{{item}}
   with_items:
+    - alert.rules
     - life.rules
 
 - meta: flush_handlers

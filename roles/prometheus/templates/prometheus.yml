@@ -4,6 +4,7 @@ global:
 
 rule_files:
   - life.rules
+  - alert.rules
 
 scrape_configs:
   - job_name: 'prometheus'
