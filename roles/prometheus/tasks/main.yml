@@ -19,8 +19,8 @@
     content: |
       DAEMON_ARGS="-alertmanager.url=http://localhost:9093"
       # Only 1GB of RAM
-      DAEMON_ARGS="$DAEMON_ARGS -storage.local.memory-chunks=102400"
-      DAEMON_ARGS="$DAEMON_ARGS -storage.local.max-chunks-to-persist=102400"
+      DAEMON_ARGS="$DAEMON_ARGS -storage.local.memory-chunks=51200"
+      DAEMON_ARGS="$DAEMON_ARGS -storage.local.max-chunks-to-persist=51200"
       # Keep a year of data
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.retention=525600h"
       # Make links work
