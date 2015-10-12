@@ -3,14 +3,14 @@ grid =
       (
         (
           (
-            (label_replace(grid, "x", "$1", "x", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 0) % 8 / 8)))
-            + (label_replace(grid, "x", "1$1", "x", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 1) % 8 / 8)))
-            + (label_replace(grid, "y", "$1", "y", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 2) % 8 / 8)))
-            + (label_replace(grid, "y", "1$1", "y", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 3) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 4) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 5) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 6) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 7) % 8 / 8)))
+            (label_replace(grid, "x", "$1", "x", "^1(.*)$") or init * scalar(round((vector(time()) + 0) % 8 / 8)))
+            + (label_replace(grid, "x", "1$1", "x", "^(.*)$") or init * scalar(round((vector(time()) + 1) % 8 / 8)))
+            + (label_replace(grid, "y", "$1", "y", "^1(.*)$") or init * scalar(round((vector(time()) + 2) % 8 / 8)))
+            + (label_replace(grid, "y", "1$1", "y", "^(.*)$") or init * scalar(round((vector(time()) + 3) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((vector(time()) + 4) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((vector(time()) + 5) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((vector(time()) + 6) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((vector(time()) + 7) % 8 / 8)))
           ) == 3
         ) * 0 + 1
       )
@@ -19,14 +19,14 @@ grid =
         (
           (
             (grid == 1) * 0
-            + (label_replace(grid, "x", "$1", "x", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 0) % 8 / 8)))
-            + (label_replace(grid, "x", "1$1", "x", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 1) % 8 / 8)))
-            + (label_replace(grid, "y", "$1", "y", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 2) % 8 / 8)))
-            + (label_replace(grid, "y", "1$1", "y", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 3) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 4) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 5) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 6) % 8 / 8)))
-            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((absent(nonexistent{}) * time() + 7) % 8 / 8)))
+            + (label_replace(grid, "x", "$1", "x", "^1(.*)$") or init * scalar(round((vector(time()) + 0) % 8 / 8)))
+            + (label_replace(grid, "x", "1$1", "x", "^(.*)$") or init * scalar(round((vector(time()) + 1) % 8 / 8)))
+            + (label_replace(grid, "y", "$1", "y", "^1(.*)$") or init * scalar(round((vector(time()) + 2) % 8 / 8)))
+            + (label_replace(grid, "y", "1$1", "y", "^(.*)$") or init * scalar(round((vector(time()) + 3) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((vector(time()) + 4) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "$1", "y", "^1(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((vector(time()) + 5) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "$1", "x", "^1(.*)$") or init * scalar(round((vector(time()) + 6) % 8 / 8)))
+            + (label_replace(label_replace(grid, "y", "1$1", "y", "^(.*)$"), "x", "1$1", "x", "^(.*)$") or init * scalar(round((vector(time()) + 7) % 8 / 8)))
           ) == 2
         ) * 0 + 1
       )
