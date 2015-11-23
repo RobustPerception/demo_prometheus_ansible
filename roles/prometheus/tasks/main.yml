@@ -21,8 +21,8 @@
       # Only 1GB of RAM
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.memory-chunks=51200"
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.max-chunks-to-persist=51200"
-      # Keep a year of data
-      DAEMON_ARGS="$DAEMON_ARGS -storage.local.retention=8760h"
+      # Keep 6 months of data
+      DAEMON_ARGS="$DAEMON_ARGS -storage.local.retention=4392h"
       # Make links work
       DAEMON_ARGS="$DAEMON_ARGS -web.external-url=http://demo.robustperception.io:9090/"
       # Security
@@ -43,6 +43,13 @@
   with_items:
     - alert.rules
     - life.rules
+
+- name: Create directory size cronjob
+  copy:
+    dest: /etc/cron.d/directory_size
+    mode: 0644
+    content: |
+      */5 * * * * root du -sb /var/log /var/cache/apt /var/lib/prometheus | sed -ne 's/^\([0-9]\+\)\t\(.*\)$/node_directory_size_bytes{directory="\2"} \1/p' > /var/lib/node_exporter/textfile_collector/directory_size.prom.$$ && mv /var/lib/node_exporter/textfile_collector/directory_size.prom.$$ /var/lib/node_exporter/textfile_collector/directory_size.prom
 
 - meta: flush_handlers
 
