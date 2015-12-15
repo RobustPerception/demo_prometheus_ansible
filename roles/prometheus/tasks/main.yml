@@ -44,6 +44,7 @@
     - alert.rules
     - life.rules
 
+# http://www.robustperception.io/monitoring-directory-sizes-with-the-textfile-collector/
 - name: Create directory size cronjob
   copy:
     dest: /etc/cron.d/directory_size
