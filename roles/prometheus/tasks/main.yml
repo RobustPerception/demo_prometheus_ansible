@@ -6,6 +6,7 @@
     - pushgateway
     - alertmanager
     - node-exporter
+    - grafana
 
 - name: Create prometheus config
   notify: restart prometheus
@@ -44,6 +45,10 @@
     - alert.rules
     - life.rules
 
+- name: Create grafana config
+  notify: restart grafana
+  template: src=grafana.ini dest=/etc/grafana/grafana.ini
+
 # http://www.robustperception.io/monitoring-directory-sizes-with-the-textfile-collector/
 - name: Create directory size cronjob
   copy:
@@ -62,4 +67,6 @@
   service: name=alertmanager state=started enabled=yes
 - name: Start node-exporter
   service: name=node-exporter state=started enabled=yes
+- name: Start grafana
+  service: name=grafana-server state=started enabled=yes
 
