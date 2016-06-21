@@ -9,7 +9,7 @@
   {{ range query "grid" | sortByLabel "x" | sortByLabel "y" }}
   {{ if eq .Labels.x "1" }}<tr>{{end}}
   <td style="background-color: {{if eq .Value 1.0}}black{{else}}white{{end}}; width: 10px; height: 10px; border: 1px solid black;">&nbsp;</td>
-  {{ if eq .Labels.x "1111111111111111" }}</tr>{{end}}
+  {{ if eq .Labels.x "11111111111111111111111111111111" }}</tr>{{end}}
   {{ end }}
   </table>
 
