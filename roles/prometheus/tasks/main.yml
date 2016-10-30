@@ -22,7 +22,7 @@
       # Only 1GB of RAM
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.memory-chunks=51200"
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.max-chunks-to-persist=51200"
-      # Keep 6 months of data
+      # Keep 1 month of data
       DAEMON_ARGS="$DAEMON_ARGS -storage.local.retention=744h"
       # Make links work
       DAEMON_ARGS="$DAEMON_ARGS -web.external-url=http://demo.robustperception.io:9090/"
