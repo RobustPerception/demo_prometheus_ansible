@@ -17,7 +17,6 @@ scrape_configs:
       - targets:
         - demo.robustperception.io:9091
   - job_name: 'alertmanager'
-    honor_labels: true
     static_configs:
       - targets:
         - demo.robustperception.io:9093
