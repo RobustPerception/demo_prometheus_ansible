@@ -1,53 +1,92 @@
 ---
-- name: Install prometheus
-  apt: name={{item}} state=latest update_cache=true cache_valid_time=600
+
+- name: create prometheus system group
+  group:
+    name: prometheus
+    system: yes
+
+- name: create prometheus system user
+  user:
+    name: prometheus
+    system: yes
+    shell: "/sbin/nologin"
+    group: prometheus
+    createhome: no
+
+- name: Create prometheus directory structure
+  file: >
+    state=directory
+    path={{ item }}
+    owner=prometheus
+    group=prometheus
+  with_items:
+    - "/opt/prometheus"
+    - "/etc/prometheus"
+    - "/etc/prometheus/rules"
+    - "/var/lib/prometheus"
+    - "/var/log/prometheus"
+    - "/opt/prometheus/current"
+
+- name: Download component binaries
+  get_url:
+    url: "{{item}}"
+    dest: "/opt/prometheus/current"
+  with_items:
+    - "https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz"
+    - "https://github.com/prometheus/alertmanager/releases/download/v{{ alertmanager_version }}/alertmanager-{{ alertmanager_version }}.linux-amd64.tar.gz"
+    - "https://github.com/prometheus/pushgateway/releases/download/v{{ pushgateway_version }}/pushgateway-{{ pushgateway_version }}.linux-amd64.tar.gz"
+    - "https://github.com/prometheus/prometheus/releases/download/v{{ prometheus_version }}/prometheus-{{ prometheus_version }}.linux-amd64.tar.gz"
+
+- name: Unarchive component tarballs
+  unarchive:
+    copy: no
+    src: "/opt/prometheus/current/{{item}}.tar.gz"
+    dest: "/opt/prometheus/current"
+    creates: "/opt/prometheus/current/{{item}}"
+  with_items:
+  - "prometheus-{{ prometheus_version }}.linux-amd64"
+  - "node_exporter-{{ node_exporter_version }}.linux-amd64"
+  - "alertmanager-{{ alertmanager_version }}.linux-amd64"
+  - "pushgateway-{{ pushgateway_version }}.linux-amd64"
+
+- name: Install grafana
+  apt: name=grafana state=latest update_cache=true cache_valid_time=600
+
+- name: Create systemd service units
+  template:
+    src: etc/systemd/system/{{item}}.service.j2
+    dest: /etc/systemd/system/{{item}}.service
+    owner: root
+    group: root
+    mode: 0644
   with_items:
     - prometheus
+    - node_exporter
     - pushgateway
     - alertmanager
-    - node-exporter
-    - grafana
 
-- name: Create prometheus config
-  notify: restart prometheus
-  template: src=prometheus.yml dest=/etc/prometheus/prometheus.yml
+- name: Copy prometheus config
+  template:
+    src: "etc/prometheus/prometheus.yml.j2"
+    dest: "/etc/prometheus/prometheus.yml"
+    mode: 0644
 
-- name: Create prometheus default config
-  notify: restart prometheus
-  copy:
-    dest: /etc/default/prometheus
-    mode: 0755
-    content: |
-      DAEMON_ARGS="-alertmanager.url=http://localhost:9093"
-      # Only 1GB of RAM
-      DAEMON_ARGS="$DAEMON_ARGS -storage.local.memory-chunks=51200"
-      DAEMON_ARGS="$DAEMON_ARGS -storage.local.max-chunks-to-persist=51200"
-      # Keep 1 month of data
-      DAEMON_ARGS="$DAEMON_ARGS -storage.local.retention=744h"
-      # Make links work
-      DAEMON_ARGS="$DAEMON_ARGS -web.external-url=http://demo.robustperception.io:9090/"
-      # Security
-      DAEMON_ARGS="$DAEMON_ARGS -web.enable-remote-shutdown=false"
-
-- name: Create menu.lib
-  copy: src=menu.lib dest=/etc/prometheus/console_libraries/menu.lib
+- name: Create grafana config
+  notify: restart grafana
+  template: src=etc/grafana/grafana.ini dest=/etc/grafana/grafana.ini
 
 - name: Copy consoles
-  copy: src={{item}} dest=/etc/prometheus/consoles/{{item}}
+  copy: src={{item}} dest=/opt/prometheus/current/prometheus-{{ prometheus_version }}.linux-amd64/consoles/{{item}}
   with_items:
     - index.html
     - life.html
 
 - name: Copy rules
-  notify: restart prometheus
   copy: src={{item}} dest=/etc/prometheus/{{item}}
   with_items:
     - alert.rules
     - life.rules
-
-- name: Create grafana config
-  notify: restart grafana
-  template: src=grafana.ini dest=/etc/grafana/grafana.ini
+  notify: reload prometheus
 
 # http://www.robustperception.io/monitoring-directory-sizes-with-the-textfile-collector/
 - name: Create directory size cronjob
@@ -57,16 +96,13 @@
     content: |
       */5 * * * * root du -sb /var/log /var/cache/apt /var/lib/prometheus | sed -ne 's/^\([0-9]\+\)\t\(.*\)$/node_directory_size_bytes{directory="\2"} \1/p' > /var/lib/node_exporter/textfile_collector/directory_size.prom.$$ && mv /var/lib/node_exporter/textfile_collector/directory_size.prom.$$ /var/lib/node_exporter/textfile_collector/directory_size.prom
 
+- name: Start services
+  service: name={{item}} state=started enabled=yes
+  with_items:
+    - prometheus
+    - pushgateway
+    - alertmanager
+    - node_exporter
+    - grafana-server
+
 - meta: flush_handlers
-
-- name: Start prometheus
-  service: name=prometheus state=started enabled=yes
-- name: Start pushgateway
-  service: name=pushgateway state=started enabled=yes
-- name: Start alertmanager
-  service: name=alertmanager state=started enabled=yes
-- name: Start node-exporter
-  service: name=node-exporter state=started enabled=yes
-- name: Start grafana
-  service: name=grafana-server state=started enabled=yes
-

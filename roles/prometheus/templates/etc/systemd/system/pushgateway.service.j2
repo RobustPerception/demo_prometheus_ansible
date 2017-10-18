@@ -1,0 +1,15 @@
+[Unit]
+Description=Pushgateway
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/pushgateway.pid
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/opt/prometheus/current/pushgateway-{{ pushgateway_version }}.linux-amd64/pushgateway
+Restart=always
+SyslogIdentifier=pushgateway
+StandardOutput=syslog
+StandardError=syslog
+[Install]
+WantedBy=multi-user.target
