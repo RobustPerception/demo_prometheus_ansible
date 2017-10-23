@@ -1,0 +1,14 @@
+[Unit]
+Description=Node_exporter
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/node-exporter.pid
+ExecStart=/opt/prometheus/current/node_exporter-{{ node_exporter_version }}.linux-amd64/node_exporter
+Restart=always
+SyslogIdentifier=node-exporter
+StandardOutput=syslog
+StandardError=syslog
+[Install]
+WantedBy=multi-user.target

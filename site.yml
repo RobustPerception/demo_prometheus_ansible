@@ -1,7 +1,7 @@
 ---
 - hosts: all
   tags: [base]
-  roles: 
+  roles:
     - base
 
 - hosts: all
