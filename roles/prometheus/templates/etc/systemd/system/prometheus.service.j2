@@ -4,7 +4,6 @@ After=network.target
 
 [Service]
 Type=simple
-EnvironmentFile=/etc/default/prometheus
 PIDFile=/var/run/prometheus.pid
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/opt/prometheus/current/prometheus-{{ prometheus_version }}.linux-amd64/prometheus --config.file=/etc/prometheus/prometheus.yml --web.listen-address=:9090 --web.external-url=demo.robustperception.io --web.console.libraries=/opt/prometheus/current/prometheus-{{ prometheus_version }}.linux-amd64/console_libraries --web.console.templates=/opt/prometheus/current/prometheus-{{ prometheus_version }}.linux-amd64/consoles --storage.tsdb.path=/var/lib/prometheus/data
