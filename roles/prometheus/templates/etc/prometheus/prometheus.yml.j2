@@ -23,6 +23,11 @@ scrape_configs:
   - job_name: 'node'
     static_configs:
       - targets:
-{%for host in groups['all'] %}
-        - {{host}}:9100
-{%endfor%}
+        - demo.robustperception.io:9100
+
+alerting:
+  alertmanagers:
+  - scheme: http
+    static_configs:
+    - targets:
+      - demo.robustperception.io:9093
