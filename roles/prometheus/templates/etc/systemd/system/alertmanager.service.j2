@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 PIDFile=/var/run/alertmanager.pid
 ExecReload=/bin/kill -HUP $MAINPID
-ExecStart=/opt/prometheus/current/alertmanager-{{ alertmanager_version }}.linux-amd64/alertmanager -config.file=/opt/prometheus/current/alertmanager-{{ alertmanager_version }}.linux-amd64/simple.yml
+ExecStart=/opt/prometheus/current/alertmanager-{{ alertmanager_version }}.linux-amd64/alertmanager --config.file=/opt/prometheus/current/alertmanager-{{ alertmanager_version }}.linux-amd64/simple.yml
 Restart=always
 SyslogIdentifier=alertmanager
 StandardOutput=syslog
