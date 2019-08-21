@@ -14,7 +14,7 @@
   copy:
     dest: /etc/apt/sources.list.d/grafana.list
     content: |
-      deb https://packagecloud.io/grafana/stable/debian/ jessie main
+      deb https://packages.grafana.com/oss/deb stable main
 - name: Add grafana apt key
   notify: update apt
   apt_key: url=https://packagecloud.io/gpg.key
