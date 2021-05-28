@@ -1,5 +1,5 @@
 ---
-prometheus_version: 2.26.0
+prometheus_version: 2.27.1
 node_exporter_version: 1.1.2
 pushgateway_version: 1.4.0
-alertmanager_version: 0.21.0
+alertmanager_version: 0.22.1
